@@ -3,7 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <title>Document</title>
+  
+  <style>
+
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    td , th {
+      border : 1px solid black;
+    }
+
+  </style>
+
 </head>
 <body>
     <!-- Les titres-->
@@ -26,9 +41,45 @@
 
     <!-- Image-->
   <img src="chemin" alt="Mot en arriere plan" width="" height="">
+  <img src="workplace.jpg" alt="workplace" usemap="#workmap">
+  <p style="background-image:url('img.jpg');">Kenainy</p>
+
+  <map name="workmap">
+    <area shape="rect" coords="34,44,270,350" href="Computer.htm" alt="Computer">
+    <area shape="rect" coords="290,172,333,250" href="phone.htm" alt="Phone">
+    <area shape="circle" coords="337,300,44" href="coffee.htm" alt="Coffee">
+  </map>
+  <p style="background-image: url('img.jpg');background-repeat: no-repeat;">pour body pas pour p l'option background-repeat</p>
+
+  <picture>
+    <source media="(min-width: 650px)" srcset="imag1.jpg">
+    <source media="(min-width: 460px)" srcset="imag2.jpg">
+    <img src="imagpardefault.jpg" >
+  </picture>
 
     <!-- Lien-->
   <a href="lien">lien</a>
+  <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+  <button onclick="document.location='default.asp'">HTML Tutorial</button>
+  <a href="mailto:someone@example.com">Send email</a>
+  <a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
+  <a href="#C4">Jump to Chapter 4 ou bookmark et c4 est est une id</a>
+
+    <!-- quotation-->
+  <blockquote cite="http://domain.com/index.php">
+    élément définit une section qui est cité d'une autre source.
+  </blockquote>
+  <p>Source : <q>texte sera dans le guilleme</q></p>
+  <abbr title="Hypertext Markup Langage">HTML</abbr>
+  <address>
+    Written by John Doe.<br>
+    Visit us at:<br>
+    Example.com<br>
+    Box 564, Disneyland<br>
+    USA
+  </address>
+  <p><cite>tag pour presente une ouvre</cite></p>
+  <bdo dir="rtl">This text will be written from right to left</bdo>
 
     <!-- style-->
   <p style="color:bleu;">couleur de texte</p>
@@ -36,6 +87,8 @@
   <p style="background-color:black;color:white;">background-color</p>
   <p style="font-size:10px">taille de texte</p>
   <p style="text-align:center;">Centre</p>
+  <p style="border:4px solid black ;">couleur bordure</p>
+  <a href="none" style="text-decoration:none;"></a>
 
     <!-- Formatting Elements-->
   <b>Bold text</b>
@@ -70,6 +123,289 @@
     <li>Continental</li>
     <li>Polaire</li>
   </ul>
+
+    <!-- Table -->
+  <table>
+    <tr>
+      <th>Firstname</th>
+      <th>Age</th>
+      <th>Sexe</th>
+    </tr>
+    <tr>
+      <td>Kenainy</td>
+      <td>23</td>
+      <td>Male</td>
+    </tr>
+
+    <!-- 
+      table, th, td {
+         border: 1px solid black;
+         border-collapse: collapse;
+         border-radius: 10px;
+      }
+
+      th, td {
+         background-color: #96D4D4;
+         border-radius: 10px;
+      }
+       
+      dotted     
+      dashed     
+      solid     
+      double     
+      groove     
+      ridge     
+      inset     
+      outset     
+      none     
+      hidden  
+
+      border-style: dotted;
+
+      th, td {
+         border-color: #96D4D4;
+      }
+
+    -->
+  </table>
+
+  <table style="width:100%;">
+    <tr>
+      <th style="width:80%;">Username</th>
+      <th>Age</th>
+      <th>sexe</th>
+    </tr>
+    <tr>
+      <td>Kenainy</td>
+      <td>12</td>
+      <td>male</td>
+    </tr>
+
+    <!-- 
+      th {
+        text-align: left;
+      }
+    -->
+  </table>
+
+  <table>
+    <caption>Mot entente du tableau</caption>
+    <tr>
+      <th colspan="2">name</th>
+      <th>age</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <!--
+
+    table {
+      border-spacing: 30px;
+    }
+
+    th, td {
+      padding-top: 10px;
+      padding-bottom: 20px;
+      padding-left: 30px;
+      padding-right: 40px;
+    }
+
+    -->
+  </table>
+
+  <table style="border : 1px solid black;border-collapse: collapse;">
+    <tr>
+      <th style="border : 1px solid black;border-collapse: collapse;">Name</th>
+      <td style="border : 1px solid black;border-collapse: collapse;">kelly</td>
+    </tr>
+    <tr>
+      <th rowspan="2" style="border : 1px solid black;border-collapse: collapse;">Phone</th>
+      <td style="border : 1px solid black;border-collapse: collapse;">13313</td>
+    </tr>
+    <tr>
+      <td style="border : 1px solid black;border-collapse: collapse;">003434</td>
+    </tr>
+
+    <!--
+      tr:nth-child(even) {
+        background-color: #D6EEEE;
+      }
+       If you use (odd) instead of (even), the styling will occur on row 1,3,5 etc. instead of 2,4,6 etc.
+
+      td:nth-child(even), th:nth-child(even) {
+        background-color: #D6EEEE;
+      }
+
+      tr:nth-child(even) {
+        background-color: rgba(150, 212, 212, 0.4);
+      }
+                          
+      th:nth-child(even),td:nth-child(even) {
+        background-color: rgba(150, 212, 212, 0.4);
+      }
+
+      tr {
+        border-bottom: 1px solid #ddd;
+      }
+
+      tr:hover {background-color: #D6EEEE;}
+
+
+    -->
+  </table>
+
+  <table>
+    <colgroup>
+      <col span="2" style="background-color: #D6EEEE">
+      <col span="3" style="background-color: pink">
+      <!-- <col span="3" style="visibility: collapse"> -->
+    </colgroup>
+    <tr>
+      <th>34</th>
+      <th>45</th>
+      <th>45</th>
+      <th>45</th>
+      <th>45</th>
+      <th>45</th>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>34</td>
+      <td>34</td>
+      <td>23</td>
+      <td>23</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>34</td>
+      <td>23</td>
+      <td>34</td>
+      <td>12</td>
+      <td>12</td>
+    </tr>
+    
+  </table>
+
+  <!-- description liste-->
+
+  <dl>
+    <dt>Coffe</dt>
+    <dd>-black</dd>
+    <dt>Milk</dt>
+    <dd>-White</dd>
+  </dl>
+
+  <ul style="list-style-type: disc;">
+    <li></li>
+  </ul>
+  <!-- Type 	Description
+type="1" 	The list items will be numbered with numbers (default)
+type="A" 	The list items will be numbered with uppercase letters
+type="a" 	The list items will be numbered with lowercase letters
+type="I" 	The list items will be numbered with uppercase roman numbers
+type="i" 	The list items will be numbered with lowercase roman numbers--
+  -->
+  <ol type="1">
+    <li>rfgf</li>
+    <li>cvvcvgf</li>
+  </ol>
+  <ol start="50">
+    <li>Black</li>
+    <li>White</li>
+  </ol>
+
+  <!-- DIV-->
+
+  <!--
+    <style>
+      div {
+        width:300px;
+        margin:auto; centrer le div 
+    }
+    </style> 
+
+    <style>
+    .mycontainer {
+        width:100%;
+        overflow:auto;
+    }
+    .mycontainer div {
+        width:33%;
+        float:left;
+    }    pour aligner horizontalement le div
+    </style>
+
+    <style>
+    .mycontainer {
+        display: flex;
+    }
+    .mycontainer > div {
+        width:33%;
+    }
+    </style>
+
+    <style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    </style>
+
+    <style>
+    div {
+        width: 30%;
+        display: inline-block;
+    }
+    </style>
+  -->
+
+    <!-- Bouton-->
+    <button> CLick</button>
+    <button disabled></button>
+    <button onclick="alert('Test')"> alert</button>
+    <button type="submit">submet</button>
+    <button type="reset">Reset</button>
+    <button type="button"></button>
+    
+    <!-- iframe-->
+    <iframe src="demo_iframe.thm" title="Iframe Example" height="200" width="200"></iframe>
+    <iframe src="" style="border:none;"></iframe>
+    <!-- style="border:2px solid red;"-->
+    <iframe src="demo_iframe.htm" name="iframe_a" title="Iframe Example"></iframe>
+    <p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+
+    <!-- 
+      @media screen and (max-width: 800px) {
+        .left, .main, .right {
+            width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+        } 
+    }
+    -->
+
+    <!-- Computer code element-->
+
+    <code>
+      x=1;
+      y=2;
+      z=x+y;
+    </code>
+
+    <p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+
+    <pre>
+      <code>
+        x=1;
+        y=2;
+        z=x+y;
+      </code>
+    </pre>
+
+    <p>Message from my computer:</p>
+    <p><samp>File not found.<br>Press F1 to continue</samp></p>
+
+    <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
 
 </body>
 </html>
